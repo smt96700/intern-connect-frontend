@@ -43,8 +43,9 @@ export default function RequestToAdmin() {
             console.log("inside socket functionality");
             const socket= getSocketInstance();
          socket.connect();
+         console.log("message sent message")
          socket.emit("message_sent", messageObject);
-         toast.success("Message sent")
+        //  toast.success("Message sent")
          // console.log(state);
          console.log("Running")
 
