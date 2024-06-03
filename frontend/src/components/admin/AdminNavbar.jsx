@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext, useEffect } from "react";
-// import Notifications from "./Notifications"; 
+import Notifications from "./Notifications";
 import { useAdminContext } from "../../hooks/useAdminContext";
 import { useNavigate } from 'react-router-dom';
 import { MdDashboard } from "react-icons/md";

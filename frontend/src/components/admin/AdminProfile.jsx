@@ -1,4 +1,4 @@
-// import AdminHeader from "./AdminHeader"; 
+import AdminHeader from "./AdminHeader";
 import AdminNavbar from "./AdminNavbar";
 import AdminProfileCard from "./AdminProfileCard";
 import UpdateProfile from "./UpdateProfile";
@@ -6,7 +6,7 @@ import UpdateProfile from "./UpdateProfile";
 export default function AdminProfile() {
     return (
         <>
-            {/* <AdminHeader /> */}
+            <AdminHeader />
 
             <section className=" flex flex-col md:flex-row lg:flex-row py-1 bg-blueGray-50">
                 <AdminNavbar />
