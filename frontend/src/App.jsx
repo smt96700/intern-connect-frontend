@@ -15,12 +15,12 @@ import Profile from './components/student/Profile'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './components/NotFound'
-import Jobs from './components/job/Jobs'
-import JobDetails from './components/job/JobDetails'
+// import Jobs from './components/job/Jobs'
+// import JobDetails from './components/job/JobDetails'
 import Application from './components/application/Application'
 import MyApplications from './components/application/MyApplications'
-import PostJob from './components/job/PostJob'
-import MyJobs from './components/job/MyJobs'
+// import PostJob from './components/job/PostJob'
+// import MyJobs from './components/job/MyJobs'
 import AdminProfile from './components/admin/AdminProfile'
 function App() {
   const {user} = useAdminContext();
@@ -79,16 +79,16 @@ function App() {
              path='/admin-home-page/profile'
              element={user && user.userType == 'admin'? <AdminProfile/> : <Navigate to = '/'/>}
           ></Route>
-          <Route
+          {/* <Route
              path='/user/job/getAll'
              element={user ? <Jobs/>: <Navigate to='/' />}
           >
-          </Route>
-          <Route
+          </Route> */}
+          {/* <Route
           path='/user/job/:id'
           element= {user ? <JobDetails/>: <Navigate to='/' />}
           >
-          </Route>
+          </Route> */}
           <Route
           path='/user/application/:id'
           element={user ? <Application/>: <Navigate to='/' />}
@@ -99,16 +99,16 @@ function App() {
           element= {user ? <MyApplications/>: <Navigate to='/' />}
           >
           </Route>
-           <Route
+           {/* <Route
            path='/admin-home-page/job/post'
            element={user && user.userType == 'admin'? <PostJob/> : <Navigate to = '/'/>}
            >
-           </Route>
-           <Route
+           </Route> */}
+           {/* <Route
            path='/admin-home-page/job/me'
            element= {user && user.userType == 'admin'? <MyJobs/> : <Navigate to = '/'/>}
            >
-           </Route>
+           </Route> */}
           <Route
            path= '*'
            element= {<NotFound />}
