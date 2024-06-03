@@ -12,7 +12,7 @@ export default function AdminHomePage() {
     return (
         <>
             {/* <HasNewMessageContext.Provider value= {{hasNewMessage, setHasNewMessage}}> */}
-            <AdminHeader/>
+            {/* <AdminHeader/> */}
 
             <section className=" flex flex-col md:flex-row lg:flex-row py-1 bg-blueGray-50">
                 <AdminNavbar />

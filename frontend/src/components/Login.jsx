@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import axios from "axios";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAdminContext } from "../hooks/useAdminContext";
-import UseSocketSetup from "../hooks/UseSocketSetup";
+// import UseSocketSetup from "../hooks/UseSocketSetup";
 import StudentDashboard from "./student/StudentDashboard";
 import { toast } from 'react-toastify';
 import { useNewMessageContext } from "../hooks/useNewMessageContext";
@@ -214,7 +214,7 @@ export default function Login() {
                     </div>
                 </div>
             )}
-            {loginUser && <UseSocketSetup />}
+            {/* {loginUser && <UseSocketSetup />} */}
         </>
     );
 
