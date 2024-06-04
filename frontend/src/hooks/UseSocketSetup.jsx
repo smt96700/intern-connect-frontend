@@ -73,7 +73,7 @@ const UseSocketSetup = () => {
       socket.off("connected")
       socket.off("message_received")
     };
-  }, [messageDispatch]);
+  }, [newMessageDispatch]);
   return (
     <>
       {user && (user.userType == 'student') && (
