@@ -71,7 +71,7 @@ export default function RequestToAdmin() {
             // navigate('/admin-dashboard')
 
             const res = await axios.post(`${PORT}/api/user/validUser`, { username })
-            console.log("User validated")
+            console.log("User validated", res);
             const user = { username: username, message: message, userType: "student" };
 
             dispatch({ type: "LOGIN", payload: user });
