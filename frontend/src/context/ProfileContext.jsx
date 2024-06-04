@@ -24,6 +24,7 @@ export const ProfileContextProvider = ({children}) => {
     useEffect(() => {
         const fetchProfile = async() => {
             try {
+                console.log("userid", user);
                 const response = await axios.get(`${PORT}/api/${user.userType}/dashboard?userid=${encodeURIComponent(user.userid)}`);
                 const userInfo = response.data.message;
 
@@ -34,6 +35,7 @@ export const ProfileContextProvider = ({children}) => {
         }
         if (user)
             fetchProfile();
+
     }, [user])
 
     return (
