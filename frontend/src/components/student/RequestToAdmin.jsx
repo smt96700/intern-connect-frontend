@@ -38,27 +38,31 @@ export default function RequestToAdmin() {
     const messageObject={to_username: "admin01", from_username:username, message: message};
     useEffect(()=>{
          console.log("helllo buddy")
-         try{
-         if (user) {
-            console.log("inside socket functionality");
-            const socket= getSocketInstance();
-         socket.connect();
-         console.log("message sent message")
-         socket.emit("message_sent", messageObject);
-        //  toast.success("Message sent")
-         // console.log(state);
-         console.log("Running")
-
-         //save message within the database
-         const response = axios.post(`${PORT}/api/anonymous/reset_password_message`, messageObject);
-         toast.success("Message sent");
-         console.log("Message is being saved");
+         const requestToSocket= async()=>{
+            try{
+                if (user) {
+                   console.log("inside socket functionality");
+                   const socket= getSocketInstance();
+                socket.connect();
+                console.log("message sent message")
+                socket.emit("message_sent", messageObject);
+               //  toast.success("Message sent")
+                // console.log(state);
+                console.log("Running")
+       
+                //save message within the database
+                const response = await axios.post(`${PORT}/api/anonymous/reset_password_message`, messageObject);
+                toast.success("Message sent");
+                console.log("Message is being saved");
+                }
+               }catch(error){
+                   toast.error("Failed to send Message");
+                   console.log("message failed to save");
+                   toast.error("Failed to send message");
+               }
          }
-        }catch(error){
-            toast.error("Failed to send Message");
-            console.log("message failed to save");
-            toast.error("Failed to send message");
-        }
+         requestToSocket();
+        
     }, [user])
 
     const onSubmit = async () => {
