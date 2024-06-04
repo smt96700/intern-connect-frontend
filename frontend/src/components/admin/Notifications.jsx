@@ -19,7 +19,7 @@ export default function Notifications() {
         console.log("inside notifications", hasNewMessage);
     }, [hasNewMessage]);
 
-    UseSocketSetup();
+    // UseSocketSetup();
 
     return (
         <>
