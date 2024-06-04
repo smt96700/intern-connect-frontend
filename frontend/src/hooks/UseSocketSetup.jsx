@@ -72,7 +72,7 @@ const UseSocketSetup = () => {
       socket.off("dm");
       socket.off("connected")
       socket.off("message_received")
-      socket.disconnect();
+    
     };
   }, [messageDispatch]);
   return (
